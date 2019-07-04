@@ -6,7 +6,8 @@
     "jsdom": "^11.8.0",
     "mdn-browser-compat-data": "^0.0.39",
     "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0"
+    "ncp": "^2.0.0",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "all": "npm run create-missing-data && npm run validate-data && npm run generate-info && npm run validate-html && npm run validate-info && npm run generate-pages",
@@ -20,6 +21,9 @@
     "validate-info": "npm run validate-specinfo && npm run validate-implinfo",
     "validate-specinfo": "ajv -s tools/tr.jsons -d .out/data/tr.json --errors=text",
     "validate-implinfo": "ajv -s tools/impl.jsons -d .out/data/impl.json --errors=text",
-    "validate-html": "node tools/validate-html.js media mobile publishing security web5g"
-  }
+    "validate-html": "node tools/validate-html.js media mobile publishing security web5g",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
