@@ -5,7 +5,7 @@
     "fetch-filecache-for-crawling": "^3.0.2",
     "jsdom": "^11.8.0",
     "mdn-browser-compat-data": "^0.0.39",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.0",
     "ncp": "^2.0.0"
   },
   "scripts": {
